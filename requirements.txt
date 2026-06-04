@@ -1,0 +1,5 @@
+ 
+robotframework>=6.1.0
+robotframework-seleniumlibrary>=6.1.0
+webdrivermanager>=0.4.0
+robotframework-pabot>=2.15.0

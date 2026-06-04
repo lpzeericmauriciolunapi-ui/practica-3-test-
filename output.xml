@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.0rc3 on win32)" generated="2026-06-04T16:37:26.038697" rpa="false" schemaversion="5">
+<suite id="s1" name="Ejercicio5 Contact Us" source="C:\Users\COMPU\Desktop\testing\robot_framework_practica\test_cases\ejercicio5_contact_us.robot">
+<kw name="Abrir Navegador En URL" owner="common_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:26.633974" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-04T16:37:26.633473" elapsed="6.253157"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-04T16:37:32.886986" elapsed="0.054817"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-04T16:37:32.942110" elapsed="0.020877"/>
+</kw>
+<arg>${HOME_URL}</arg>
+<status status="PASS" start="2026-06-04T16:37:26.631830" elapsed="6.331423"/>
+</kw>
+<test id="s1-t1" name="Formulario De Contacto Completo" line="10">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:32.983756" level="INFO">Page title is 'Automation Exercise'.</msg>
+<arg>Automation Exercise</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-06-04T16:37:32.964770" elapsed="0.019148"/>
+</kw>
+<kw name="Tomar Captura" owner="common_keywords">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2026-06-04T16:37:32.985763" level="INFO">${timestamp} = 1780605452</msg>
+<var>${timestamp}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2026-06-04T16:37:32.985123" elapsed="0.000696"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:33.176909" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="results/screenshots/contacto_01_inicio_1780605452.png"&gt;&lt;img src="results/screenshots/contacto_01_inicio_1780605452.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_PATH}/${nombre_archivo}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-04T16:37:32.986093" elapsed="0.190984"/>
+</kw>
+<arg>contacto_01_inicio</arg>
+<status status="PASS" start="2026-06-04T16:37:32.984537" elapsed="0.192706"/>
+</kw>
+<kw name="Esperar Y Hacer Click" owner="common_keywords">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-06-04T16:37:33.178384" elapsed="0.093496"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:33.272725" level="INFO">Clicking element 'xpath://a[contains(text(),'Contact us')]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T16:37:33.272196" elapsed="3.168680"/>
+</kw>
+<arg>${CONTACT_LINK}</arg>
+<status status="PASS" start="2026-06-04T16:37:33.177871" elapsed="3.263281"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-06-04T16:37:37.443088" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-06-04T16:37:36.441736" elapsed="1.001600"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:37.514288" level="INFO">Current page contains text 'Get In Touch'.</msg>
+<arg>Get In Touch</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-06-04T16:37:37.443918" elapsed="0.070546"/>
+</kw>
+<kw name="Tomar Captura" owner="common_keywords">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2026-06-04T16:37:37.516542" level="INFO">${timestamp} = 1780605457</msg>
+<var>${timestamp}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2026-06-04T16:37:37.515732" elapsed="0.000887"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:37.622336" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="results/screenshots/contacto_02_formulario_1780605457.png"&gt;&lt;img src="results/screenshots/contacto_02_formulario_1780605457.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_PATH}/${nombre_archivo}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-04T16:37:37.516889" elapsed="0.105631"/>
+</kw>
+<arg>contacto_02_formulario</arg>
+<status status="PASS" start="2026-06-04T16:37:37.515100" elapsed="0.107576"/>
+</kw>
+<kw name="Esperar Y Ingresar Texto" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-04T16:37:37.624283" elapsed="0.096877"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:37.722141" level="INFO">Typing text 'Eric Luna' into text field 'xpath://input[@data-qa='name']'.</msg>
+<arg>${locator}</arg>
+<arg>${texto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T16:37:37.721452" elapsed="0.262726"/>
+</kw>
+<arg>${CONTACT_NAME_FIELD}</arg>
+<arg>${CONTACT_NAME}</arg>
+<status status="PASS" start="2026-06-04T16:37:37.623336" elapsed="0.361062"/>
+</kw>
+<kw name="Esperar Y Ingresar Texto" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-04T16:37:37.985950" elapsed="0.075714"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:38.062619" level="INFO">Typing text 'eric@gmail.com' into text field 'xpath://input[@data-qa='email']'.</msg>
+<arg>${locator}</arg>
+<arg>${texto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T16:37:38.061993" elapsed="0.195094"/>
+</kw>
+<arg>${CONTACT_EMAIL_FIELD}</arg>
+<arg>${CONTACT_EMAIL}</arg>
+<status status="PASS" start="2026-06-04T16:37:37.985080" elapsed="0.272211"/>
+</kw>
+<kw name="Esperar Y Ingresar Texto" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-04T16:37:38.258869" elapsed="0.078123"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:38.337746" level="INFO">Typing text 'Consulta sobre productos' into text field 'xpath://input[@data-qa='subject']'.</msg>
+<arg>${locator}</arg>
+<arg>${texto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T16:37:38.337285" elapsed="0.184432"/>
+</kw>
+<arg>${CONTACT_SUBJECT_FIELD}</arg>
+<arg>${CONTACT_SUBJECT}</arg>
+<status status="PASS" start="2026-06-04T16:37:38.257958" elapsed="0.263956"/>
+</kw>
+<kw name="Esperar Y Ingresar Texto" owner="common_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-04T16:37:38.523512" elapsed="0.070029"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:38.594378" level="INFO">Typing text 'Mensaje de prueba de Eric Luna para el formulario de contacto.' into text field 'xpath://textarea[@data-qa='message']'.</msg>
+<arg>${locator}</arg>
+<arg>${texto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T16:37:38.593846" elapsed="0.212583"/>
+</kw>
+<arg>${CONTACT_MESSAGE_FIELD}</arg>
+<arg>${CONTACT_MESSAGE}</arg>
+<status status="PASS" start="2026-06-04T16:37:38.522825" elapsed="0.283857"/>
+</kw>
+<kw name="Tomar Captura" owner="common_keywords">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2026-06-04T16:37:38.808961" level="INFO">${timestamp} = 1780605458</msg>
+<var>${timestamp}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2026-06-04T16:37:38.808136" elapsed="0.000915"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:38.947035" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="results/screenshots/contacto_03_datos_completados_1780605458.png"&gt;&lt;img src="results/screenshots/contacto_03_datos_completados_1780605458.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_PATH}/${nombre_archivo}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-04T16:37:38.809403" elapsed="0.137884"/>
+</kw>
+<arg>contacto_03_datos_completados</arg>
+<status status="PASS" start="2026-06-04T16:37:38.807423" elapsed="0.140186"/>
+</kw>
+<kw name="Scroll To Element" owner="common_keywords">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-06-04T16:37:38.948858" elapsed="0.326873"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-06-04T16:37:39.777146" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-06-04T16:37:39.276091" elapsed="0.501322"/>
+</kw>
+<arg>${SUBMIT_BUTTON}</arg>
+<status status="PASS" start="2026-06-04T16:37:38.948319" elapsed="0.829334"/>
+</kw>
+<kw name="Esperar Y Hacer Click" owner="common_keywords">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-06-04T16:37:39.779171" elapsed="0.072818"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:39.852691" level="INFO">Clicking element 'xpath://input[@data-qa='submit-button']'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T16:37:39.852282" elapsed="0.136958"/>
+</kw>
+<arg>${SUBMIT_BUTTON}</arg>
+<status status="PASS" start="2026-06-04T16:37:39.778325" elapsed="0.211089"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:39.990115" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2026-06-04T16:37:39.989859" elapsed="0.050788"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-06-04T16:37:42.042065" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-06-04T16:37:40.041308" elapsed="2.000935"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Success! Your details have been submitted successfully.</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-06-04T16:37:42.042739" elapsed="0.038287"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:42.118268" level="INFO">Current page contains text 'Success! Your details have been submitted successfully.'.</msg>
+<arg>Success! Your details have been submitted successfully.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-06-04T16:37:42.081621" elapsed="0.036796"/>
+</kw>
+<kw name="Tomar Captura" owner="common_keywords">
+<kw name="Get Time" owner="BuiltIn">
+<msg time="2026-06-04T16:37:42.120266" level="INFO">${timestamp} = 1780605462</msg>
+<var>${timestamp}</var>
+<arg>epoch</arg>
+<doc>Returns the given time in the requested format.</doc>
+<status status="PASS" start="2026-06-04T16:37:42.119761" elapsed="0.000558"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:42.201518" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="results/screenshots/contacto_04_envio_exitoso_1780605462.png"&gt;&lt;img src="results/screenshots/contacto_04_envio_exitoso_1780605462.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_PATH}/${nombre_archivo}_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-04T16:37:42.120508" elapsed="0.081237"/>
+</kw>
+<arg>contacto_04_envio_exitoso</arg>
+<status status="PASS" start="2026-06-04T16:37:42.119241" elapsed="0.082738"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:42.272552" level="INFO">Element 'xpath://a[contains(text(),'Home')]' is displayed.</msg>
+<arg>${HOME_BUTTON}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-04T16:37:42.202488" elapsed="0.070216"/>
+</kw>
+<kw name="Esperar Y Hacer Click" owner="common_keywords">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-06-04T16:37:42.273984" elapsed="0.076808"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:42.351619" level="INFO">Clicking element 'xpath://a[contains(text(),'Home')]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-04T16:37:42.351116" elapsed="0.197366"/>
+</kw>
+<arg>${HOME_BUTTON}</arg>
+<status status="PASS" start="2026-06-04T16:37:42.273301" elapsed="0.275413"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-06-04T16:37:43.550732" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-06-04T16:37:42.549419" elapsed="1.001568"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-06-04T16:37:43.692539" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-06-04T16:37:43.692909" level="FAIL">Title should have been 'Automation Exercise' but was 'Automation Exercise - Contact Us'.</msg>
+<arg>Automation Exercise</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="FAIL" start="2026-06-04T16:37:43.551582" elapsed="0.150400">Title should have been 'Automation Exercise' but was 'Automation Exercise - Contact Us'.</status>
+</kw>
+<kw name="Tomar Captura" owner="common_keywords">
+<arg>contacto_05_retorno_home</arg>
+<status status="NOT RUN" start="2026-06-04T16:37:43.702806" elapsed="0.000110"/>
+</kw>
+<doc>Completar formulario de contacto y validar envio</doc>
+<status status="FAIL" start="2026-06-04T16:37:32.963485" elapsed="10.740068">Title should have been 'Automation Exercise' but was 'Automation Exercise - Contact Us'.</status>
+</test>
+<kw name="Cerrar Navegador" owner="common_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-06-04T16:37:43.705720" elapsed="2.542995"/>
+</kw>
+<status status="PASS" start="2026-06-04T16:37:43.705316" elapsed="2.543642"/>
+</kw>
+<doc>Ejercicio 5 - Formulario de Contacto</doc>
+<status status="FAIL" start="2026-06-04T16:37:26.041428" elapsed="20.207606"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Ejercicio5 Contact Us" id="s1" pass="0" fail="1" skip="0">Ejercicio5 Contact Us</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-06-04T16:37:26.608662" level="WARN">Error in file 'C:\Users\COMPU\Desktop\testing\robot_framework_practica\resources\common_keywords.robot' on line 42: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
